@@ -6,28 +6,27 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.List;
 
 @Entity
-@Table(name = "users")
+@Table(name = "roles")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserEntity {
+public class RoleEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String surname;
-    private String identificationDocument;
-    private String cellPhone;
-    private LocalDate birthDate;
-    private String email;
-    private String password;
+    private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idRole")
-    private RoleEntity role;
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
+            orphanRemoval = true,
+            mappedBy = "role"
+    )
+    private List<UserEntity> users;
 }

@@ -2,7 +2,7 @@ package com.pragma.powerup.infrastructure.exceptionhandler;
 
 public enum ExceptionResponse {
 
-    ROL_NOT_FOUND("No rol found for the requested petition");
+    ROLE_NOT_FOUND("No role found for the requested petition");
 
     private final String message;
 
