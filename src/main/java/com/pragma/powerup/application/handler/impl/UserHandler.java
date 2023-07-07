@@ -22,7 +22,7 @@ public class UserHandler implements IUserHandler {
 
     @Override
     public void saveUser(UserRequestDto userRequestDto) {
-        Role role = roleServicePort.findRole(2L);
+        Role role = roleServicePort.findRoleById(2L);
         User user = userRequestMapper.toUser(userRequestDto);
         user.setRole(role);
         userServicePort.saveUser(user);

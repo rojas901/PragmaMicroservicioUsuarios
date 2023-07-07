@@ -13,7 +13,7 @@ public class RoleUseCase implements IRoleServicePort {
     }
 
     @Override
-    public Role findRole(Long id) {
-        return rolePersistencePort.findRole(id);
+    public Role findRoleById(Long id) {
+        return rolePersistencePort.findRoleById(id);
     }
 }
