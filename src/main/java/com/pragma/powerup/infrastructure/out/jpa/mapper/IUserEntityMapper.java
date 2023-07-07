@@ -1,7 +1,7 @@
 package com.pragma.powerup.infrastructure.out.jpa.mapper;
 
-import com.pragma.powerup.domain.model.Usuario;
-import com.pragma.powerup.infrastructure.out.jpa.entity.UsuarioEntity;
+import com.pragma.powerup.domain.model.User;
+import com.pragma.powerup.infrastructure.out.jpa.entity.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
@@ -9,8 +9,7 @@ import org.mapstruct.ReportingPolicy;
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.IGNORE
 )
-public interface IUsuarioEntityMapper {
+public interface IUserEntityMapper {
 
-    UsuarioEntity toEntity(Usuario usuario);
-    Usuario toUsuario(UsuarioEntity usuarioEntity);
+    UserEntity toEntity(User user);
 }

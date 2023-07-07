@@ -6,20 +6,25 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+
 @Entity
-@Table(name = "rol")
+@Table(name = "users")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class RolEntity {
+public class UserEntity {
 
-
-    //@Column(name = "rol_id", nullable = false)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(length = 50)
-    private String nombre;
+    private String name;
+    private String surname;
+    private String identificationDocument;
+    private String cellPhone;
+    private String role;
+    private LocalDate birthDate;
+    private String email;
+    private String password;
 }
