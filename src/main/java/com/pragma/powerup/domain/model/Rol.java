@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ObjectModel {
+public class Rol {
     private Long id;
-    private String name;
+    private String nombre;
 }

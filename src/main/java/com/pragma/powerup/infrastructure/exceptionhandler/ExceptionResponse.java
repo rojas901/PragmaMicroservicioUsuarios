@@ -1,7 +1,9 @@
 package com.pragma.powerup.infrastructure.exceptionhandler;
 
 public enum ExceptionResponse {
-    NO_DATA_FOUND("No data found for the requested petition");
+
+    ROL_NOT_FOUND("No rol found for the requested petition"),
+    USUARIO_EXISTENTE("User already exist with this email");
 
     private final String message;
 
